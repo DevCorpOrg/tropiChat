@@ -317,3 +317,9 @@ The P2P implementation supports several advanced features:
 4. **Distributed Data Storage**:
    - Store chat history using IPFS
    - Implement Orbit-DB for distributed databases# tropiChat
+
+## License
+
+This project is licensed under the MIT License with Additional Clauses - see the [LICENSE](LICENSE) file for details.
+
+Created by [@kitbaroness](https://github.com/kitbaroness) for [DevCorp Organization](https://github.com/DevCorpOrg) on GitHub.
