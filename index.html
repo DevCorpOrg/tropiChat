@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Tropical Chat Room</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<body>
+    <!-- Login Modal -->
+    <div class="login-container" id="login-modal">
+        <div class="login-box">
+            <h2 class="blink">Welcome to TropiChat!</h2>
+            <p>Connect your wallet to join the retro chat!</p>
+            <img src="https://cdn-icons-png.flaticon.com/512/6646/6646537.png" alt="Web3 Wallet" style="width: 80px; margin: 10px auto; display: block;">
+            <button id="connect-wallet" class="glow-button">Connect Wallet</button>
+            <div id="wallet-status"></div>
+            <div id="username-container" style="display:none;">
+                <input type="text" id="username-input" placeholder="Choose a Username">
+                <button id="enter-chat" class="glow-button">Enter Chat</button>
+            </div>
+            <div id="wallet-info" style="margin-top: 15px; font-size: 12px; color: #cccccc;">
+                Supports MetaMask, Phantom, Brave Wallet, Coinbase Wallet, and more!
+            </div>
+            <div style="margin-top: 10px; font-size: 11px; color: #999999;">
+                <a href="https://metamask.io/download/" target="_blank" style="color: #00ffff; margin-right: 10px;">Get MetaMask</a>
+                <a href="https://phantom.app/download" target="_blank" style="color: #00ffff; margin-right: 10px;">Get Phantom</a>
+                <a href="https://www.coinbase.com/wallet" target="_blank" style="color: #00ffff;">Get Coinbase Wallet</a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <h1>🌴 TropiChat 🌴</h1>
+        <div class="marquee">
+            <div class="marquee-content">
+                Welcome to TropiChat - the coolest place on the web! Remember to be kind to other chatters! No spamming or flooding the chat! Have fun! 🌴 🏄 🌊 ☀️
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="chat-container">
+            <div class="chat-messages" id="chat-messages">
+                <div class="message">
+                    <span class="username" style="color: #ffcc00;">TropiChat:</span>
+                    <span>Welcome to TropiChat! Connect your wallet to join the conversation!</span>
+                </div>
+            </div>
+            
+            <div class="emoji-picker">
+                <span class="emoji" onclick="chat.addEmoji('😊')">😊</span>
+                <span class="emoji" onclick="chat.addEmoji('😂')">😂</span>
+                <span class="emoji" onclick="chat.addEmoji('❤️')">❤️</span>
+                <span class="emoji" onclick="chat.addEmoji('👍')">👍</span>
+                <span class="emoji" onclick="chat.addEmoji('🔥')">🔥</span>
+                <span class="emoji" onclick="chat.addEmoji('🌴')">🌴</span>
+                <span class="emoji" onclick="chat.addEmoji('🏄')">🏄</span>
+                <span class="emoji" onclick="chat.addEmoji('🌊')">🌊</span>
+                <span class="emoji" onclick="chat.addEmoji('☀️')">☀️</span>
+                <span class="emoji" onclick="chat.addEmoji('🍹')">🍹</span>
+            </div>
+            
+            <div class="input-container">
+                <input type="text" id="message-input" placeholder="Type your message..." disabled>
+                <button id="send-button" disabled>Send</button>
+            </div>
+        </div>
+        
+        <div class="users-container">
+            <h3 style="color: #ffcc00; text-align: center; margin-top: 0;">Online Users</h3>
+            <div id="online-users">
+                <!-- Users will be added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Web3 Library -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.8.2/dist/web3.min.js"></script>
+    
+    <!-- Import modules -->
+    <script src="js/config.js"></script>
+    <script src="js/wallet.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/debug.js"></script>
+</body>
+</html>
